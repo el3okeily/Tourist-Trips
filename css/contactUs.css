@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+:root {
+    --main-color: #016589;
+    --main-color-alt: #074a62;
+    --main-transition: 0.6s;
+}
+.contactus
+{
+    background-color: rgb(241, 241, 241);
+    width: 100%;
+    max-width: 100%;
+    padding: 40px;
+}
+.contactus .form
+{
+    grid-area: form;
+}
+.contactus .info
+{
+    grid-area: info;
+}
+.contactus .map
+{
+    grid-area: map;
+}
+.contactus .box
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas: 
+    "form info"
+    "form map";
+    grid-gap: 20px;
+    margin-top:20px ;
+}
+.contactus .contact
+{
+    padding: 40px;
+    background: #fff;
+}
+.contactus .contact h3
+{
+    font-weight: 500;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+/* form*/
+.formBox .row50
+{
+    display: flex;
+    gap: 20px;
+}
+.inputBox
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+}
+.formBox .inputBox
+{
+    width: 100%;
+}
+.inputBox span
+{
+    color: var(--main-color);
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.inputBox input
+{
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid #333;
+}
+.inputBox textarea
+{
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid #333;
+    resize: none;
+    min-height: 220px;
+    margin-bottom: 10px;
+}
+.inputBox input[type="submit"]
+{
+    background-color: var(--main-color);
+    color: #fff;
+    color: #000;
+    border: none;
+    font-size: 1.1em;
+    width: 100%;
+    font-weight: 900;
+    cursor: pointer;
+    padding: 14px 15px;
+    transition: var(--main-transition);
+}
+.inputBox input[type="submit"]:hover {
+    box-shadow:  0px 0px 20px var(--main-color-alt) ;
+}
+.inputBox ::placeholder
+{
+    color: #999;
+}
+/*info*/
+.contactus .info
+{
+    background: #0e3959;
+    max-width: 100%;
+}
+.contactus .info h3
+{
+    color: #fff;
+}
+.contactus .info .infoBox div
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.contactus .info .infoBox div span {
+    min-width: 40px;
+    height: 40px;
+    color: #fff;
+    background: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 50%;
+    margin-right: 15px;
+    transition: var(--main-transition);
+}
+.contactus .info .infoBox div span:hover {
+    transform: translateY(-2px) scale(1.1);
+}
+.contactus .info .infoBox div p
+{
+    color: #fff;
+    font-size: 1.1em;
+}
+.contactus .info .infoBox div a
+{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em; 
+}
+.contactus .sci
+{
+    margin-top: 40px;
+}
+.contactus .sci i
+{
+    margin-right: 15px;
+    font-size: 2rem;
+    color: #fff;
+    transition: var(--main-transition);
+}
+.contactus .sci i:hover{
+    transform: translateY(-2px) scale(1.1);
+    color: #0165E1;
+}
+
+.contactus .map
+{
+    padding: 0;
+}
+.contactus .map iframe
+{
+    width: 100%;
+    height: 100%;
+}
+/* responsive desing*/
+@media (max-width:1090px)
+{
+    .contactus
+    {
+        padding: 20px;
+    }
+    .contactus .box{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "form"
+        "info"
+        "map";
+    }
+    .formBox .row50
+    {
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+    }
+    .inputBox
+    {
+        width: 100%;
+    }
+    .contactus .contact
+    {
+        padding: 30px;
+    }
+    .contactus .map
+    {
+        min-height: 300px;
+        padding: 0;
+    }
+}
+@media (max-width: 767px) {
+    .contactus .map {
+        max-width: 95%;
+    }
+    .contactus .contact {
+        max-width: 300px;
+        margin: auto;
+    }
+    .contactus .info .infoBox div a {
+        font-size: 1rem;
+    }
+}
